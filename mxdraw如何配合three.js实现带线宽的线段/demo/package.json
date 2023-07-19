@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "vite ."
+  },
+  "dependencies": {
+    "mxdraw": "^0.1.170",
+    "three": " ^0.113.2"
+  },
+  "devDependencies": {
+    "vite": "^4.4.4"
+  }
+}
