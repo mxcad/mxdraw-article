@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
     "dev": "vite ."
   },
@@ -12,6 +12,6 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "mxcad": "^1.0.85"
+    "mxcad": "^1.0.92"
   }
 }
