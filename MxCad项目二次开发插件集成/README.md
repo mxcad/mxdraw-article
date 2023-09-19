@@ -210,7 +210,7 @@ MxCAD目录说明:
 
 下载地址： https://gitee.com/mxcadx/mxdraw-article/blob/master/MxCad项目二次开发插件集成/MxCADAppElectron.zip
 
-下载解压后, 按照依赖`npm install`然后运行`npm run dev` 就可以启动electron项目了。
+下载解压后, 安装依赖`npm install`然后运行`npm run dev` 就可以启动electron项目了。
 
 对于electron版本，前端二次开发的插件(就是上述MxCAD目录生成的js文件)没有任何变动, 
 
