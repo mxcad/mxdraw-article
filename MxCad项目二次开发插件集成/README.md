@@ -126,10 +126,10 @@ footerRightBtnSwitchData: ["栅格", "正交", "极轴","对象捕捉", "对象�
 
 mxServerConfig.json:
 
-uploadFileConfig: 是基于[WebUploader](http://fex.baidu.com/webuploader/)实现的文件上次, 部分配置参数它，后端上传接口说明如下:
+uploadFileConfig: 是基于[WebUploader](http://fex.baidu.com/webuploader/)实现的文件上传, 部分配置参数它，后端上传接口说明如下:
 
 * baseUrl: 同一个后台服务器地址，下述相对接口都是基于同一服务器地址
-默认的后台服务源码位置在云图开发包中的位置: 
+默认的后台服务源码位置在云图开发包中的位置:
 windows:
  ![Alt text](image-10.png)
 linux:
