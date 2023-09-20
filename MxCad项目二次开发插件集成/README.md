@@ -135,7 +135,6 @@ windows:
 linux:
 ![Alt text](image-11.png)
 
-
 * fileisExist: 该接口返回data.ret === "fileAlreadyExist" 表示通过md5检查文件文件已存在秒传， 不是则需要上传。
 该POST请求会携带两个参数{ fileHash："文件md5", filename: "文件名称" }可自行根据请求实现相应的的后端逻辑
 默认的上传服务相关接口实现在云图开发包中的位置:
@@ -275,3 +274,4 @@ preload.ts则是公共的
 | vite.plugins.config.ts | vite的打包配置 | 每一个新的创建目录都要在这里记录，如果你稍微了解vite打包那么可以根据自己的需求作出调整， 但是最终输出文件的结构位置一定不可以变，不然无法加载插件 |
 
 对于有二次开发需求现有配置或者插件无法满足时，可以给我们反馈，后续会逐步完善。
+
