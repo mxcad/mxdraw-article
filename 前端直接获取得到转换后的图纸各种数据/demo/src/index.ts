@@ -1,4 +1,4 @@
-import { McCmColor, McDb, McDbLayerTableRecord, MxCADUiPrEntity, MxCpp, createMxCad } from "mxcad"
+import { McCmColor, McDb, McDbLayerTableRecord, MxCADUiPrEntity, MxCpp, createMxCad, McDbAlignedDimension } from "mxcad"
 const canvas = document.createElement("canvas")
 canvas.id = "myCanvas"
 const canvasBox = document.createElement("div")
