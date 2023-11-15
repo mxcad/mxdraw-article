@@ -206,6 +206,7 @@ console.log(point)
 而用户输入也可能是通过输入框输入值, 来确定除了坐标以外的其他参数:
 
 ```ts
+import { MxFun } from "mxdraw"
 const input = document.createElement("input")
 input.addEventListener("keydown", (e: KeyboardEvent) => {
     // 设置传输命令行消息数据
@@ -294,6 +295,3 @@ MxFun.addCommand("Mx_draw_Text", async ()=> {
 ```
 
 本文提供的源码下载地址: https://gitee.com/mxcadx/mxdraw-article/tree/master/mxcad参数化绘图/demo.zip
-
-
-
