@@ -4,15 +4,13 @@
 
 下面我们就主要讲解一下如何用mxcad中的多段线去绘制一个支持倒角和圆角的矩形
 
-首先矩形一般由两个对角点来绘制出完整的矩形, 所以，我们第一步自然是获取对角点。
-
 在autocad中绘制一个矩形会通过一些命令或者输入关键字来确定是否需要倒角圆角或者通过面积, 宽高去绘制。
 
 那么下面我们讲模仿autocad的绘制矩形的交互绘制, 完整的实现一个动态交互式的绘制一个矩形出来。
 
 ## 命令交互初始化工作
 
-而对于这一套命令交互, 我们用尽量简洁的方式实现, 代码如下:
+对于命令交互, 我们用尽量简洁的方式实现, 代码如下:
 
 ```ts
 import { MxFun } from "mxdraw"
@@ -41,7 +39,13 @@ MxFun.listenForCommandLineInput(({ msCmdTip, msCmdDisplay, msCmdText }) => {
 
 ## 绘制矩形
 
-通过mxcad中提供的获取命令输入的一些类:[MxCADUiPrPoint](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrPoint.html#class-mxcaduiprpoint)获取点、[MxCADUiPrDist](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrDist.html)获取距离、[MxCADUiPrInt](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrInt.html#class-mxcaduiprint)获取数字、[MxCADUiPrKeyWord](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrKeyWord.html#class-mxcaduiprkeyword)获取关键词
+首先矩形一般由两个对角点来绘制出完整的矩形, 所以，我们第一步自然是获取对角点。
+
+通过mxcad提供的获取用户输入的一些类:[MxCADUiPrPoint](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrPoint.html#class-mxcaduiprpoint)获取点、[MxCADUiPrDist](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrDist.html)获取距离、[MxCADUiPrInt](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrInt.html#class-mxcaduiprint)获取数字、[MxCADUiPrKeyWord](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADUiPrKeyWord.html#class-mxcaduiprkeyword)获取关键词 来交互式的绘制矩形
+
+我们可以用`MxCADUiPrPoint`获取到用户点击的对角点, 以及其他的几个类获取到用户的不同输入, 比如距离、数字、关键词等等。
+
+根据这些用户输入, 我们来一个动态可交互的确认一个矩形如何绘制
 
 绘制矩形主要分为以下几个步骤:
 
@@ -55,7 +59,7 @@ MxFun.listenForCommandLineInput(({ msCmdTip, msCmdDisplay, msCmdText }) => {
 
 其中一些关键词可能导致不同的绘制方式, 每个关键词对应不同处理。
 
-首先获取对角点的代码比较简单，代码如下: 
+首先获取对角点的代码比较简单，代码如下:
 
 ```ts
 import { MxCADUiPrPoint } from "mxcad"
