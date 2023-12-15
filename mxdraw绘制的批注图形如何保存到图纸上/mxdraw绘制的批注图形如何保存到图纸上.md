@@ -287,7 +287,15 @@ class SaveCommentToDWG {
 
 如上代码中，将各种不同的批注都绘制到图纸中, 最终将图纸保存在参数提供的`savefile` 中。
 
-根据上文所述，我们知道了保存批注到图纸中的整个实现，可用参考代码或者直接使用提供的这个服务。
+最终最终发现将这些图形绘制在图纸上是通过`MxDrawCloudServer\Bin\Release\MxNode.node`和`MxDrawCloudServer\Bin\Release\Mx2DNode.node`提供的方法调用的,
+你可以根据源码中使用方式，完善绘制更多自定义的图形到图纸中。
+
+mxdraw实现自定义批注: [点击查看对应文档](https://mxcadx.gitee.io/mxdraw_docs/previewAnnotation/bases.html#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%B9%E6%B3%A8)
+
+查看文档后, 这些批注中的`getTypeName`方式就是服务端得到的参数`TypeName`, 其他参数数据就是`dwgOut`返回的对应的这个图形需要的一些数据, 最终组成这样一个个的批注数据上传到服务器中
+
+服务器根据这些批注数据, 绘制出对应图形到图纸中。
+
+根据上文所述，我们知道了保存批注到图纸中的整个实现，可用参考代码或者直接使用这个接口。
 
 注意以上代码为代码片段，请自行下载[MxDraw云图开发包](https://www.mxdraw.com/download.html)按照上文步骤了解保存批注的整个实现流程和实现细节。
-
