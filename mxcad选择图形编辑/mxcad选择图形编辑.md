@@ -34,7 +34,7 @@ objIds.forEach((objId: McObjectId)=> {
 })
 ```
 
-我们也可以通过[MxCADSelectionSet](../../api/classes/2d.MxCADSelectionSet.md)进行选择:
+我们也可以通过[MxCADSelectionSet](https://mxcadx.gitee.io/mxcad_docs/api/classes/2d.MxCADSelectionSet.html)进行选择:
 
 ```ts
 import { MxCADSelectionSet, MxCADResbuf, MxCADUiPrPoint } from "mxcad"
@@ -155,5 +155,8 @@ window.onload = async () => {
 }
 
 ```
+
+效果图:
+![Alt text](1703642990164.jpg)
 
 本文提供的源码下载地址: <https://gitee.com/mxcadx/mxdraw-article/tree/master/mxcad选择图形编辑/demo.zip>
