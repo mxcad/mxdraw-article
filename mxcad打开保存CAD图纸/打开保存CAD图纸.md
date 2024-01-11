@@ -173,8 +173,6 @@ npm install mxcad mxdraw
 
 然后将CDN引入的改成本地引入就好
 
-
-
-
+注意DEMO中的图纸转换程序并不是最新的，请不要正式使用, 该DEMO只是为了理解如何实现在网页打开和保存CAD图纸
 
 
