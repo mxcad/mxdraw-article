@@ -150,7 +150,7 @@ mxcad.saveFile(void 0, (data)=> {
 node -v
 ```
 
-然后可以下载我们的demo源码: <https://gitee.com/mxcadx/mxdraw-article/blob/master/mxcad打开保存CAD图纸/demo.zip>
+然后可以下载我们的demo源码: <https://github.com/mxcad/mxdraw-article/blob/master/mxcad%E6%89%93%E5%BC%80%E4%BF%9D%E5%AD%98CAD%E5%9B%BE%E7%BA%B8/demo.zip>
 
 下载好demo后 解压进入demo目录
 
